@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Royal Coin Cards Gallery — See our premium gold and silver coin card packaging work."/>
+  <title>Gallery — Royal Coin Cards</title>
+  <link rel="icon" href="images/logo.svg" type="image/svg+xml"/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <style>
+    .gallery-placeholder { cursor: pointer; }
+    .gallery-coin { border-radius: 50%; animation: coin-spin 8s linear infinite; }
+    .gallery-caption { padding: 0.8rem 1rem; border-top: 1px solid var(--border); }
+    .gallery-caption-title { font-family: 'Cinzel', serif; font-size: 0.72rem; color: var(--gold-light); letter-spacing: 0.12em; text-transform: uppercase; }
+    .gallery-caption-sub { font-size: 0.72rem; color: var(--text-muted); margin-top: 2px; }
+    .gallery-item { transition: opacity 0.4s ease, transform 0.4s ease; }
+  </style>
+</head>
+<body>
+<canvas id="particles-canvas"></canvas>
+<a href="https://wa.me/923092181689?text=Hello%20Royal%20Coin%20Cards%2C%20I%20am%20interested%20in%20your%20products." class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<header class="site-header" id="site-header">
+  <a href="index.html" class="logo-wrap">
+    <div class="logo-svg-wrap"><img src="images/logo.svg" alt="Royal Coin Cards" width="52" height="52"/></div>
+    <div class="logo-text-wrap"><span class="logo-name">Royal Coin Cards</span><span class="logo-tagline">Premium Packaging. Precious Trust.</span></div>
+  </a>
+  <nav class="nav-links">
+    <a href="index.html">Home</a><a href="about.html">About</a>
+    <a href="products.html">Products</a><a href="gallery.html" class="active">Gallery</a><a href="contact.html">Contact</a>
+  </nav>
+  <a href="contact.html" class="btn-quote">Get a Quote</a>
+  <button class="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+</header>
+<nav class="mobile-nav">
+  <a href="index.html">Home</a><a href="about.html">About</a>
+  <a href="products.html">Products</a><a href="gallery.html">Gallery</a><a href="contact.html">Contact</a>
+  <a href="contact.html" class="btn-primary" style="width:fit-content">Get a Quote</a>
+</nav>
+
+<!-- HERO -->
+<section class="gallery-hero">
+  <div class="gallery-hero-bg"></div>
+  <div class="container" style="position:relative;z-index:2">
+    <div class="section-label" style="justify-content:center">Our Portfolio</div>
+    <h1 class="section-title" style="font-size:clamp(2.5rem,5vw,4rem)">Crafted with <span>Precision.</span><br>Delivered with <span>Pride.</span></h1>
+    <div class="gold-line"></div>
+    <p class="section-subtitle">A glimpse of our finest work. Every piece you see was made in Karachi — by hand, with love for the craft.</p>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery-section">
+  <div class="container">
+    <!-- Filters -->
+    <div class="gallery-filters reveal">
+      <button class="filter-btn active" data-filter="all">All Work</button>
+      <button class="filter-btn" data-filter="gold">Gold Cards</button>
+      <button class="filter-btn" data-filter="silver">Silver Cards</button>
+      <button class="filter-btn" data-filter="custom">Custom Printing</button>
+      <button class="filter-btn" data-filter="packaging">Packaging</button>
+    </div>
+
+    <!-- Masonry Grid -->
+    <div class="gallery-masonry reveal">
+
+      <!-- Item 1 -->
+      <div class="gallery-item" data-category="gold">
+        <div class="gallery-item-inner">
+          <div class="gallery-placeholder" style="background:linear-gradient(135deg,#0F1535,#1A2155);min-height:280px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1rem;padding:2rem">
+            <div class="gallery-coin" style="width:100px;height:100px;background:radial-gradient(circle at 35% 35%,#F5E6B8,#C9A84C 40%,#9A7A2E 70%,#6B5520)"></div>
+            <div style="font-family:'Cinzel',serif;font-size:0.85rem;color:var(--gold-light);letter-spacing:0.15em;text-align:center">1 GRAM GOLD<br>COIN CARD</div>
+          </div>
+          <div class="gallery-overlay"><span class="gallery-label">1g Gold Card — Front View</span></div>
+        </div>
+        <div class="gallery-caption">
+          <div class="gallery-caption-title">1 Gram Gold Coin Card</div>
+          <div class="gallery-caption-sub">Premium Gold Packaging</div>
+        </div>
+      </div>
+
+      <!-- Item 2 -->
+      <div class="gallery-item" data-category="silver">
+        <div class="gallery-item-inner">
+          <div class="gallery-placeholder" style="background:linear-gradient(135deg,#141A3D,#0F1535);min-height:220px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1rem;padding:2rem">
+            <div class="gallery-coin" style="width:90px;height:90px;background:radial-gradient(circle at 35% 35%,#FFFFFF,#C0C0C0 40%,#808080 70%,#505050)"></div>
+            <div style="font-family:'Cinzel',serif;font-size:0.85rem;color:#C0C0C0;letter-spacing:0.15em;text-align:center">1 GRAM SILVER<br>COIN CARD</div>
+          </div>
+          <div class="gallery-overlay"><span class="gallery-label">1g Silver Card</span></div>
+        </div>
+        <div class="gallery-caption">
+          <div class="gallery-caption-title">1 Gram Silver Coin Card</div>
+          <div class="gallery-caption-sub">Pure Silver Series</div>
+        </div>
+      </div>
+
+      <!-- Item 3 - Tall -->
+      <div class="gallery-item" data-category="custom">
+        <div class="gallery-item-inner">
+          <div class="gallery-placeholder" style="background:linear-gradient(160deg,#0A0E2A,#1A2155,#0A0E2A);min-height:380px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1.5rem;padding:2rem">
+            <img src="images/logo.svg" width="80" height="80" alt="RCC Logo" style="filter:drop-shadow(0 0 15px rgba(201,168,76,0.5))"/>
+            <div style="text-align:center">
+              <div style="font-family:'Cinzel',serif;font-size:1rem;color:var(--gold-light);letter-spacing:0.2em">ROYAL COIN CARDS</div>
+              <div style="font-family:'Cormorant Garamond',serif;font-size:0.8rem;color:var(--text-muted);margin-top:4px;letter-spacing:0.15em">CUSTOM BRANDED DESIGN</div>
+            </div>
+            <div style="display:flex;gap:1rem">
+              <div style="width:60px;height:80px;background:linear-gradient(135deg,#1A2155,#0F1535);border:1px solid rgba(201,168,76,0.3);border-radius:4px;display:flex;align-items:center;justify-content:center">
+                <div style="width:30px;height:30px;background:radial-gradient(circle at 35% 35%,#F5E6B8,#C9A84C 40%,#9A7A2E 70%,#6B5520);border-radius:50%"></div>
+              </div>
+              <div style="width:60px;height:80px;background:linear-gradient(135deg,#0F1535,#141A3D);border:1px solid rgba(201,168,76,0.2);border-radius:4px;display:flex;align-items:center;justify-content:center">
+                <div style="width:30px;height:30px;background:radial-gradient(circle at 35% 35%,#FFFFFF,#C0C0C0 40%,#808080 70%,#505050);border-radius:50%"></div>
+              </div>
+              <div style="width:60px;height:80px;background:linear-gradient(135deg,#1A2155,#0F1535);border:1px solid rgba(201,168,76,0.3);border-radius:4px;display:flex;align-items:center;justify-content:center">
+                <div style="width:30px;height:30px;background:radial-gradient(circle at 35% 35%,#F5E6B8,#C9A84C 40%,#9A7A2E 70%,#6B5520);border-radius:50%"></div>
+              </div>
+            </div>
+          </div>
+          <div class="gallery-overlay"><span class="gallery-label">Custom Brand Collection</span></div>
+        </div>
+        <div class="gallery-caption">
+          <div class="gallery-caption-title">Custom Branded Collection</div>
+          <div class="gallery-caption-sub">Gold + Silver Mixed Pack</div>
+        </div>
+      </div>
+
+      <!-- Item 4 -->
+      <div class="gallery-item" data-category="gold">
+        <div class="gallery-item-inner">
+          <div class="gallery-placeholder" style="background:linear-gradient(135deg,#1A2155,#0F1535);min-height:250px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1rem;padding:2rem">
+            <div class="gallery-coin" style="width:110px;height:110px;background:radial-gradient(circle at 35% 35%,#F5E6B8,#C9A84C 40%,#9A7A2E 70%,#6B5520)"></div>
+            <div style="font-family:'Cinzel',serif;font-size:0.85rem;color:var(--gold-light);letter-spacing:0.12em">2 GRAM GOLD</div>
+          </div>
+          <div class="gallery-overlay"><span class="gallery-label">2g Gold Card — Premium</span></div>
+        </div>
+        <div class="gallery-caption">
+          <div class="gallery-caption-title">2 Gram Gold Coin Card</div>
+          <div class="gallery-caption-sub">Premium Gold Collection</div>
+        </div>
+      </div>
+
+      <!-- Item 5 - Packaging -->
+      <div class="gallery-item" data-category="packaging">
+        <div class="gallery-item-inner">
+          <div class="gallery-placeholder" style="background:linear-gradient(135deg,#080C20,#141A3D);min-height:300px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1rem;padding:2rem">
+            <!-- Stacked cards visual -->
+            <div style="position:relative;width:160px;height:120px">
+              <div style="position:absolute;left:0;top:20px;width:70px;height:96px;background:linear-gradient(135deg,#1A2155,#0F1535);border:1px solid rgba(201,168,76,0.3);border-radius:6px;transform:rotate(-8deg)"></div>
+              <div style="position:absolute;left:20px;top:10px;width:70px;height:96px;background:linear-gradient(135deg,#141A3D,#1A2155);border:1px solid rgba(201,168,76,0.4);border-radius:6px;transform:rotate(-3deg)"></div>
+              <div style="position:absolute;left:40px;top:0;width:70px;height:96px;background:linear-gradient(135deg,#0F1535,#1A2155);border:1px solid rgba(201,168,76,0.5);border-radius:6px;display:flex;align-items:center;justify-content:center">
+                <div style="width:30px;height:30px;background:radial-gradient(circle at 35% 35%,#F5E6B8,#C9A84C 40%,#9A7A2E 70%,#6B5520);border-radius:50%"></div>
+              </div>
+            </div>
+            <div style="font-family:'Cinzel',serif;font-size:0.8rem;color:var(--gold);letter-spacing:0.15em;text-align:center">BULK PACKAGING<br>READY TO SHIP</div>
+          </div>
+          <div class="gallery-overlay"><span class="gallery-label">Bulk Packaging Display</span></div>
+        </div>
+        <div class="gallery-caption">
+          <div class="gallery-caption-title">Wholesale Bulk Packaging</div>
+          <div class="gallery-caption-sub">Ready for Bulk Orders</div>
+        </div>
+      </div>
+
+      <!-- Item 6 -->
+      <div class="gallery-item" data-category="silver">
+        <div class="gallery-item-inner">
+          <div class="gallery-placeholder" style="background:linear-gradient(135deg,#141A3D,#0F1535);min-height:260px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1rem;padding:2rem">
+            <div class="gallery-coin" style="width:110px;height:110px;background:radial-gradient(circle at 35% 35%,#FFFFFF,#C0C0C0 40%,#808080 70%,#505050)"></div>
+            <div style="font-family:'Cinzel',serif;font-size:0.85rem;color:#C0C0C0;letter-spacing:0.12em">2 GRAM SILVER</div>
+          </div>
+          <div class="gallery-overlay"><span class="gallery-label">2g Silver Card — Premium</span></div>
+        </div>
+        <div class="gallery-caption">
+          <div class="gallery-caption-title">2 Gram Silver Coin Card</div>
+          <div class="gallery-caption-sub">Silver Premium Series</div>
+        </div>
+      </div>
+
+      <!-- Item 7 - Custom tall -->
+      <div class="gallery-item" data-category="custom">
+        <div class="gallery-item-inner">
+          <div class="gallery-placeholder" style="background:linear-gradient(160deg,#0A0E2A,#0F1535);min-height:320px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1.2rem;padding:2rem">
+            <div style="border:1px solid rgba(201,168,76,0.3);border-radius:8px;padding:1.5rem 2rem;text-align:center;background:rgba(201,168,76,0.04)">
+              <div style="font-family:'Cinzel',serif;font-size:0.7rem;color:var(--gold);letter-spacing:0.25em;margin-bottom:0.8rem">CUSTOM PRINT SAMPLE</div>
+              <div style="width:70px;height:70px;background:radial-gradient(circle at 35% 35%,#F5E6B8,#C9A84C 40%,#9A7A2E 70%,#6B5520);border-radius:50%;margin:0 auto 0.8rem"></div>
+              <div style="font-family:'Cinzel',serif;font-size:0.75rem;color:var(--white);letter-spacing:0.1em">YOUR BRAND</div>
+              <div style="font-size:0.65rem;color:var(--text-muted);margin-top:3px">999.9 Fine Gold</div>
+              <div style="font-size:0.6rem;color:rgba(201,168,76,0.5);margin-top:8px;letter-spacing:0.15em">✦ MADE IN PAKISTAN ✦</div>
+            </div>
+          </div>
+          <div class="gallery-overlay"><span class="gallery-label">Custom Print — Your Brand</span></div>
+        </div>
+        <div class="gallery-caption">
+          <div class="gallery-caption-title">Custom Brand Printing</div>
+          <div class="gallery-caption-sub">Your Logo on Premium Card</div>
+        </div>
+      </div>
+
+      <!-- Item 8 -->
+      <div class="gallery-item" data-category="packaging">
+        <div class="gallery-item-inner">
+          <div class="gallery-placeholder" style="background:linear-gradient(135deg,#0F1535,#1A2155);min-height:230px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1rem;padding:2rem">
+            <div style="display:flex;gap:0.8rem;flex-wrap:wrap;justify-content:center">
+              <div style="width:55px;height:75px;background:linear-gradient(135deg,#1A2155,#0F1535);border:1px solid rgba(201,168,76,0.3);border-radius:5px;display:flex;align-items:center;justify-content:center"><div style="width:25px;height:25px;background:radial-gradient(circle at 35% 35%,#F5E6B8,#C9A84C 40%,#9A7A2E 70%,#6B5520);border-radius:50%"></div></div>
+              <div style="width:55px;height:75px;background:linear-gradient(135deg,#141A3D,#0F1535);border:1px solid rgba(192,192,192,0.3);border-radius:5px;display:flex;align-items:center;justify-content:center"><div style="width:25px;height:25px;background:radial-gradient(circle at 35% 35%,#FFFFFF,#C0C0C0 40%,#808080 70%,#505050);border-radius:50%"></div></div>
+              <div style="width:55px;height:75px;background:linear-gradient(135deg,#1A2155,#0F1535);border:1px solid rgba(201,168,76,0.3);border-radius:5px;display:flex;align-items:center;justify-content:center"><div style="width:25px;height:25px;background:radial-gradient(circle at 35% 35%,#F5E6B8,#C9A84C 40%,#9A7A2E 70%,#6B5520);border-radius:50%"></div></div>
+              <div style="width:55px;height:75px;background:linear-gradient(135deg,#141A3D,#0F1535);border:1px solid rgba(192,192,192,0.3);border-radius:5px;display:flex;align-items:center;justify-content:center"><div style="width:25px;height:25px;background:radial-gradient(circle at 35% 35%,#FFFFFF,#C0C0C0 40%,#808080 70%,#505050);border-radius:50%"></div></div>
+            </div>
+            <div style="font-family:'Cinzel',serif;font-size:0.8rem;color:var(--gold);letter-spacing:0.15em">MIXED COLLECTION</div>
+          </div>
+          <div class="gallery-overlay"><span class="gallery-label">Gold & Silver Mix Pack</span></div>
+        </div>
+        <div class="gallery-caption">
+          <div class="gallery-caption-title">Mixed Collection Display</div>
+          <div class="gallery-caption-sub">Gold + Silver Packaging</div>
+        </div>
+      </div>
+
+    </div><!-- end masonry -->
+
+    <!-- Upload CTA -->
+    <div style="text-align:center;margin-top:4rem;padding:3rem;border:1px dashed rgba(201,168,76,0.25);border-radius:8px;background:rgba(201,168,76,0.02)" class="reveal">
+      <div style="font-size:2rem;margin-bottom:1rem">📸</div>
+      <h3 style="font-family:'Cinzel',serif;font-size:1.2rem;color:var(--white);margin-bottom:0.5rem">Real Photos Coming Soon</h3>
+      <p style="font-size:0.85rem;color:var(--text-muted);max-width:450px;margin:0 auto 1.5rem">We're adding real product photos to showcase our actual work. In the meantime, contact us for samples and more details.</p>
+      <a href="https://wa.me/923092181689?text=Hello%2C%20I%20want%20to%20see%20samples%20of%20your%20coin%20cards." target="_blank" class="btn-primary">Request Samples on WhatsApp</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div class="footer-brand"><div class="footer-logo-wrap"><div class="logo-svg-wrap"><img src="images/logo.svg" alt="Royal Coin Cards" width="44" height="44"/></div><div class="logo-text-wrap"><span class="logo-name" style="font-size:1rem">Royal Coin Cards</span></div></div><p class="footer-tagline">Pakistan's first &amp; only premium wholesale coin card manufacturer.</p><div class="footer-social"><a href="https://facebook.com/royalcoincards" target="_blank" class="social-link"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a><a href="https://instagram.com/royalcoincards" target="_blank" class="social-link"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a><a href="https://wa.me/923092181689" target="_blank" class="social-link" style="background:rgba(37,211,102,0.1);border-color:rgba(37,211,102,0.3);color:#25D366"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a></div></div>
+    <div><h4 class="footer-col-title">Quick Links</h4><ul class="footer-links"><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="products.html">Products</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div><h4 class="footer-col-title">Products</h4><ul class="footer-links"><li><a href="products.html">1 Gram Gold Cards</a></li><li><a href="products.html">2 Gram Gold Cards</a></li><li><a href="products.html">1 Gram Silver Cards</a></li><li><a href="products.html">2 Gram Silver Cards</a></li><li><a href="products.html">Custom Branded</a></li></ul></div>
+    <div><h4 class="footer-col-title">Contact</h4><div class="footer-contact-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.8 10.72 19.79 19.79 0 01.73 2.18 2 2 0 012.72 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.69a16 16 0 006.29 6.29l1.06-1.06a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg><span>+92 309 2181689</span></div><div class="footer-contact-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><span>royalcoincards@gmail.com</span></div><div class="footer-contact-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Karachi, Pakistan</span></div></div>
+  </div>
+  <div class="divider"></div>
+  <div class="footer-bottom"><p class="footer-copy">&copy; 2025 <span>Royal Coin Cards</span>. All Rights Reserved.</p><p class="footer-made">Crafted with Pride in Karachi, Pakistan 🇵🇰</p></div>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>
